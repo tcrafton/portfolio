@@ -60,7 +60,7 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    img: 'src/assets/pccMain.png',
+    img: './src/assets/pccMain.png',
     url: 'https://react-projects.netlify.app/',
     github: 'https://github.com/john-smilga',
     title: 'Production Control Center',
