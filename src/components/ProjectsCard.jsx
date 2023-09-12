@@ -1,8 +1,6 @@
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';
 const ProjectsCard = ({ url, img, github, title, text }) => {
-  console.log(url);
-  console.log(img);
   return (
     <article className="bg-white rounded-lg shadow-md block hover:shadow-xl duration-300">
       <img
