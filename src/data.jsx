@@ -5,9 +5,12 @@ import sqlImg from './assets/sqlImg.svg';
 import angularjsImg from './assets/angularjsImg.svg';
 import pccMain from './assets/pccMain.png';
 
+const pccImages = import.meta.glob('./assets/workProjects/pcc/*');
+const potLifeImages = import.meta.glob('./assets/workProjects/potLife/*');
+
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
-  { id: nanoid(), href: '#skills', text: 'skills' },
+  { id: nanoid(), href: '#skills', text: 'experience' },
   { id: nanoid(), href: '#projects', text: 'projects' },
   { id: nanoid(), href: '#about', text: 'about' },
 ];
@@ -63,8 +66,9 @@ export const projects = [
     img: pccMain,
     url: 'https://react-projects.netlify.app/',
     github: 'https://github.com/john-smilga',
+    projectID: 'pcc',
     title: 'Production Control Center',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
+    text: 'Serves as central location for accessing all process control information for the plant.',
   },
   {
     id: nanoid(),
@@ -81,5 +85,24 @@ export const projects = [
     github: 'https://github.com/john-smilga',
     title: 'third project',
     text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
+  },
+];
+
+export const workProjectDetails = [
+  {
+    id: 'pcc',
+    //projectImages: import.meta.glob('./assets/pcc/*'),
+    projectImages: Object.keys(pccImages),
+    imageDescriptions: [
+      'Charts providing detailed analysis of anode effects occuring in the reduction cells, a critical metric for the aluminum reduction process.',
+      'Provides ability to filter reduction cells by exception criteria to quickly see which cells need to be addressed.  Also able to see charts of key metrics, recent alarms issued and notes entered for the cell.',
+      'Charts for analyzing key process indicators for each line of reduction cells.  Trends can be easily reviewed to determine if corrections need to be made.',
+      'Detailed information on metal production.',
+    ],
+  },
+  {
+    id: 'potLife',
+    //projectImages: import.meta.glob('./assets/pcc/*'),
+    projectImages: potLifeImages,
   },
 ];
