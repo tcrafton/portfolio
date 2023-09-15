@@ -50,11 +50,11 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
                     {selectedProject['imageDescriptions'][index]}
                   </p>
                 </div>
-                <img
+                {/* <img
                   src={`src/${project}`}
                   alt="projectImage"
                   className="col-span-8 w-[120vh] h-[60vh]"
-                />
+                /> */}
               </div>
             );
           })}
