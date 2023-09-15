@@ -38,8 +38,8 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
 
       <CustomModal ref={projectDetailModal} className="projectDetailModal">
         <h2>Project Details</h2>
-        {selectedProject['projectImages'] &&
-          selectedProject['projectImages'].map((project, index) => {
+        {selectedProject['imageDescriptions'] &&
+          selectedProject['imageDescriptions'].map((project, index) => {
             return (
               <div
                 key={index}
