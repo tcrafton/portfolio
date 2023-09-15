@@ -92,7 +92,7 @@ export const workProjectDetails = [
   {
     id: 'pcc',
     //projectImages: import.meta.glob('./assets/pcc/*'),
-    // projectImages: Object.keys(pccImages),
+    projectImages: Object.keys(pccImages),
     imageDescriptions: [
       'Charts providing detailed analysis of anode effects occuring in the reduction cells, a critical metric for the aluminum reduction process.',
       'Provides ability to filter reduction cells by exception criteria to quickly see which cells need to be addressed.  Also able to see charts of key metrics, recent alarms issued and notes entered for the cell.',

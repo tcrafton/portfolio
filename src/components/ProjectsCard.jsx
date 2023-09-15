@@ -14,7 +14,6 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
     console.log(workProjectDetails);
     setSelectedProject(workProjectDetails.find(({ id }) => projectID));
     projectDetailModal.current.open();
-    console.log(selectedProject);
   };
 
   return (
@@ -38,8 +37,8 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
 
       <CustomModal ref={projectDetailModal} className="projectDetailModal">
         <h2>Project Details</h2>
-        {selectedProject['imageDescriptions'] &&
-          selectedProject['imageDescriptions'].map((project, index) => {
+        {selectedProject['projectImages'] &&
+          selectedProject['projectImages'].map((project, index) => {
             return (
               <div
                 key={index}
@@ -50,11 +49,11 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
                     {selectedProject['imageDescriptions'][index]}
                   </p>
                 </div>
-                {/* <img
+                <img
                   src={`src/${project}`}
                   alt="projectImage"
                   className="col-span-8 w-[120vh] h-[60vh]"
-                /> */}
+                />
               </div>
             );
           })}
