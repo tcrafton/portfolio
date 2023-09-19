@@ -1,22 +1,26 @@
 import { nanoid } from 'nanoid';
-import { FaHtml5, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
 import cSharpImg from './assets/cSharpImg.svg';
 import sqlImg from './assets/sqlImg.svg';
 import angularjsImg from './assets/angularjsImg.svg';
 import pccMain from './assets/pccMain.png';
+import warehouseMain from './assets/warehouseMain.png';
+import dashboardMain from './assets/dashboardMain.png';
 
 import aeAnalysisPng from './assets/workProjects/pcc/aeAnalysis.png';
 import exceptionPotsPng from './assets/workProjects/pcc/exceptionPots.png';
 import kpiChartsPng from './assets/workProjects/pcc/kpiCharts.png';
 import metalProductionPng from './assets/workProjects/pcc/metalProduction.png';
 
-const pccImages = import.meta.glob('./assets/workProjects/pcc/*');
-const potLifeImages = import.meta.glob('./assets/workProjects/potLife/*');
+import warehouseHistoryPng from './assets/workProjects/warehouse/warehouseHistory.png';
+import warehouseOrdersPng from './assets/workProjects/warehouse/warehouseOrders.png';
+
+import dashboardExceptionPotsPng from './assets/workProjects/dashboard/dashboardExceptionPots.png';
+import dashboardExceptionChartPng from './assets/workProjects/dashboard/dashboardExceptionChart.png';
 
 export const links = [
-  { id: nanoid(), href: '#home', text: 'home' },
   { id: nanoid(), href: '#skills', text: 'experience' },
-  { id: nanoid(), href: '#projects', text: 'projects' },
+  { id: nanoid(), href: '#projects', text: 'work projects' },
   { id: nanoid(), href: '#about', text: 'about' },
 ];
 
@@ -57,34 +61,30 @@ export const projects = [
   {
     id: nanoid(),
     img: pccMain,
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
+
     projectID: 'pcc',
     title: 'Production Control Center',
     text: 'Serves as central location for accessing all process control information for the plant.',
   },
   {
     id: nanoid(),
-    img: 'https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'second project',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
+    img: warehouseMain,
+    projectID: 'warehouse',
+    title: 'Warehouse',
+    text: 'Application for ordering items from in-plant warehouse.  Also shows history of orders entered.',
   },
   {
     id: nanoid(),
-    img: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'third project',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.',
+    img: dashboardMain,
+    projectID: 'dashboard',
+    title: 'Dashboard',
+    text: 'Dashboard that provides an overview of key process metrics for the plant.',
   },
 ];
 
 export const workProjectDetails = [
   {
     id: 'pcc',
-    //projectImages: import.meta.glob('./assets/pcc/*'),
     projectImages: [
       aeAnalysisPng,
       exceptionPotsPng,
@@ -99,8 +99,25 @@ export const workProjectDetails = [
     ],
   },
   {
-    id: 'potLife',
-    //projectImages: import.meta.glob('./assets/pcc/*'),
-    projectImages: potLifeImages,
+    id: 'warehouse',
+    projectImages: [warehouseMain, warehouseOrdersPng, warehouseHistoryPng],
+    imageDescriptions: [
+      'Screen for entering orders.',
+      'Shows latest orders entered and provides the ability to download a PDF of each entered order.',
+      'Shows history of orders entered.  Allows data to be exported as a CSV file for analysis.',
+    ],
+  },
+  {
+    id: 'dashboard',
+    projectImages: [
+      dashboardMain,
+      dashboardExceptionPotsPng,
+      dashboardExceptionChartPng,
+    ],
+    imageDescriptions: [
+      'Charts showing key metrics for the plant.',
+      'Shows the number of exceptions in each category for each room.',
+      'Shows chart of 30 day history for the exception selected.',
+    ],
   },
 ];

@@ -10,9 +10,7 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
   const [selectedProject, setSelectedProject] = useState({});
 
   const showProjectDetails = (projectID) => {
-    console.log(projectID);
-    console.log(workProjectDetails);
-    setSelectedProject(workProjectDetails.find(({ id }) => projectID));
+    setSelectedProject(workProjectDetails.find(({ id }) => id === projectID));
     projectDetailModal.current.open();
   };
 
@@ -22,7 +20,7 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
         <img
           src={img}
           alt={title}
-          className="w-full object-cover rounded-t-lg h-64 "
+          className="w-full object-cover rounded-t-lg h-64 border-[5px]"
         />
         <div className="p-8">
           <h2 className="text-xl tracking-wide font-medium">{title}</h2>
@@ -36,7 +34,7 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
       </article>
 
       <CustomModal ref={projectDetailModal} className="projectDetailModal">
-        <h2>Project Details</h2>
+        <h2 className="font-bold text-2xl underline">Project Details</h2>
         {selectedProject['projectImages'] &&
           selectedProject['projectImages'].map((project, index) => {
             return (
