@@ -50,7 +50,7 @@ const ProjectsCard = ({ url, img, github, title, text, projectID }) => {
                   </p>
                 </div>
                 <img
-                  src={`src/${project}`}
+                  src={`${project}`}
                   alt="projectImage"
                   className="col-span-8 w-[120vh] h-[60vh]"
                 />
