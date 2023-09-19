@@ -5,7 +5,10 @@ import sqlImg from './assets/sqlImg.svg';
 import angularjsImg from './assets/angularjsImg.svg';
 import pccMain from './assets/pccMain.png';
 
-import aeAnalysis from './assets/workProjects/pcc/aeAnalysis.png';
+import aeAnalysisPng from './assets/workProjects/pcc/aeAnalysis.png';
+import exceptionPotsPng from './assets/workProjects/pcc/exceptionPots.png';
+import kpiChartsPng from './assets/workProjects/pcc/kpiCharts.png';
+import metalProductionPng from './assets/workProjects/pcc/metalProduction.png';
 
 const pccImages = import.meta.glob('./assets/workProjects/pcc/*');
 const potLifeImages = import.meta.glob('./assets/workProjects/potLife/*');
@@ -18,18 +21,6 @@ export const links = [
 ];
 
 export const skills = [
-  // {
-  //   id: nanoid(),
-  //   title: 'HTML&CSS',
-  //   icon: <FaHtml5 className="h-16 w-16 text-sky-700" />,
-  //   text: 'Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.',
-  // },
-  // {
-  //   id: nanoid(),
-  //   title: 'Javascript',
-  //   icon: <FaJs className="h-16 w-16 text-sky-700" />,
-  //   text: 'Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality',
-  // },
   {
     id: nanoid(),
     title: 'React',
@@ -95,10 +86,10 @@ export const workProjectDetails = [
     id: 'pcc',
     //projectImages: import.meta.glob('./assets/pcc/*'),
     projectImages: [
-      aeAnalysis,
-      './assets/workProjects/pcc/exceptionPots.png',
-      './assets/workProjects/pcc/kpiCharts.png',
-      './assets/workProjects/pcc/metalProduction.png',
+      aeAnalysisPng,
+      exceptionPotsPng,
+      kpiChartsPng,
+      metalProductionPng,
     ],
     imageDescriptions: [
       'Charts providing detailed analysis of anode effects occuring in the reduction cells, a critical metric for the aluminum reduction process.',
