@@ -5,6 +5,8 @@ import sqlImg from './assets/sqlImg.svg';
 import angularjsImg from './assets/angularjsImg.svg';
 import pccMain from './assets/pccMain.png';
 
+import aeAnalysis from './assets/workProjects/pcc/aeAnalysis.png';
+
 const pccImages = import.meta.glob('./assets/workProjects/pcc/*');
 const potLifeImages = import.meta.glob('./assets/workProjects/potLife/*');
 
@@ -93,7 +95,7 @@ export const workProjectDetails = [
     id: 'pcc',
     //projectImages: import.meta.glob('./assets/pcc/*'),
     projectImages: [
-      './assets/workProjects/pcc/aeAnalysis.png',
+      aeAnalysis,
       './assets/workProjects/pcc/exceptionPots.png',
       './assets/workProjects/pcc/kpiCharts.png',
       './assets/workProjects/pcc/metalProduction.png',
